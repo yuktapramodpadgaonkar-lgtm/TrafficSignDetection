@@ -83,7 +83,7 @@ where all coordinates are normalized to `[0, 1]`.
 
 ---
 
-## 3. Project Structure
+ 3. Project Structure
 
 Once you run the notebook, your workspace will look roughly like this:
 
@@ -107,22 +107,22 @@ You can commit the notebook and selected output images (not the entire `runs/` f
 
 ---
 
-## 4. Setup & Installation
+ 4. Setup & Installation
 
-### 4.1. Prerequisites
+ 4.1. Prerequisites
 
 * Python **3.8+**
 * Recommended: **GPU with CUDA** support
 * A Kaggle account and a valid `kaggle.json` API key
 
-### 4.2. Create and Activate Environment (Optional but recommended)
+ 4.2. Create and Activate Environment (Optional but recommended)
 
 ```bash
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 ```
 
-### 4.3. Install Dependencies
+ 4.3. Install Dependencies
 
 The notebook installs all required packages with:
 
@@ -141,7 +141,7 @@ pip install opencv-python matplotlib seaborn pandas pillow pyyaml kaggle
 
 ---
 
-## 5. Downloading the Dataset (Kaggle)
+ 5. Downloading the Dataset (Kaggle)
 
 The notebook uses the Kaggle API:
 
@@ -166,9 +166,9 @@ The notebook also includes sanity checks to locate the dataset folder and verify
 
 ---
 
-## 6. Data Exploration & Visualization
+ 6. Data Exploration & Visualization
 
-### 6.1. Sample Images with Bounding Boxes
+ 6.1. Sample Images with Bounding Boxes
 
 The function `visualize_samples()`:
 
@@ -182,7 +182,7 @@ You can quickly confirm:
 * Bounding boxes are aligned correctly
 * Classes look reasonable (e.g., speed limits, red/green lights, stop signs)
 
-### 6.2. Class Distribution
+ 6.2. Class Distribution
 
 The function `analyze_class_distribution()`:
 
@@ -199,7 +199,7 @@ This helps identify **class imbalance** early on.
 
 ---
 
-## 7. YOLOv5 Configuration
+ 7. YOLOv5 Configuration
 
 A custom `traffic_data.yaml` is created automatically with:
 
@@ -235,7 +235,7 @@ The notebook also detects:
 
 ---
 
-## 8. Training the Model
+ 8. Training the Model
 
 The training cell launches YOLOv5 training with:
 
@@ -265,7 +265,7 @@ Training time is measured and printed at the end of this stage.
 
 ---
 
-## 9. Training Metrics & Plots
+ 9. Training Metrics & Plots
 
 After training, the notebook reads `runs/train/traffic_yolov5s_exp/results.csv` and builds a dashboard of plots:
 
@@ -289,7 +289,7 @@ It also prints the final values from the last epoch, including:
 
 ---
 
-## 10. Evaluation on Test Set
+ 10. Evaluation on Test Set
 
 The best weights from training are loaded from:
 
@@ -346,7 +346,7 @@ Recall           <fill from results.csv>
 
 ---
 
-## 11. Inference on Sample Images
+ 11. Inference on Sample Images
 
 For inference, the notebook loads the trained model via `torch.hub`:
 
@@ -375,7 +375,7 @@ You can embed a sample image in your README after you commit it, for example:
 
 ---
 
-## 12. Inference Speed Benchmark
+ 12. Inference Speed Benchmark
 
 An optional section of the notebook measures approximate inference latency:
 
@@ -400,9 +400,9 @@ Approximate throughput: YY FPS
 
 ---
 
-## 13. How to Use This Project
+ 13. How to Use This Project
 
-### Option A – Run the Notebook Directly
+ Option A – Run the Notebook Directly
 
 1. Open `YOLOv5_v5.ipynb` in **Google Colab** or Jupyter.
 2. Run cells **top to bottom**:
@@ -418,7 +418,7 @@ Approximate throughput: YY FPS
    * (Optional) Run speed benchmark
 3. Inspect the generated images and metrics in `runs/` and the project root.
 
-### Option B – Reuse the Trained Weights
+ Option B – Reuse the Trained Weights
 
 If you only want inference:
 
@@ -438,7 +438,7 @@ results.show()   # or results.save()
 
 ---
 
-## 14. Possible Improvements / Future Work
+ 14. Possible Improvements / Future Work
 
 A few directions to extend this project:
 
@@ -458,7 +458,7 @@ A few directions to extend this project:
 
 ---
 
-## 15. Acknowledgements
+ 15. Acknowledgements
 
 * **Ultralytics YOLOv5** for the detection framework.
 * **Kaggle** and the dataset author (`pkdarabi`) for the cardetection dataset.
@@ -466,7 +466,7 @@ A few directions to extend this project:
 
 ---
 
-## 16. License
+ 16. License
 
 Specify your license here, for example:
 
@@ -478,13 +478,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 > **Note for reviewers / recruiters:**
 > The notebook in this repository walks through the *full* lifecycle of an object detection project: data preparation, EDA, model training, evaluation, and inference. The code is organized so it can be used both as a reference implementation and as a starting point for production experiments.
-
-```
-
----
-
-If you’d like, I can also:
-
-- Add a short **“Project Motivation”** paragraph tailored to your resume and MSAI program.
-- Help you write a **one-sentence tagline** to put at the top of your GitHub profile that links to this project as your flagship DL work.
-```
