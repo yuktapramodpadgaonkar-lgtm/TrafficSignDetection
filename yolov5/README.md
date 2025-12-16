@@ -1,5 +1,5 @@
 ````markdown
-# Traffic Signal & Road Sign Detection with YOLOv5
+ Traffic Signal & Road Sign Detection with YOLOv5
 
 Robust real-time detection of traffic lights and road signs using a custom-trained YOLOv5 model on a Kaggle traffic dataset.
 
@@ -10,7 +10,7 @@ Robust real-time detection of traffic lights and road signs using a custom-train
 ![YOLOv5](https://img.shields.io/badge/Model-YOLOv5s-green.svg)
 ![Status](https://img.shields.io/badge/Status-Research%20Project-brightgreen.svg)
 
-## 1. Overview
+ 1. Overview
 
 This project trains a **YOLOv5** object detection model to recognize **traffic lights and road signs** from images.  
 
@@ -29,7 +29,7 @@ The notebook is designed to work smoothly on **Google Colab** as well as a local
 
 ---
 
-## 2. Dataset
+ 2. Dataset
 
 **Source**
 
